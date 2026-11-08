@@ -67,7 +67,7 @@ function Layout() {
 }
 
 function PhotoPlaceholder({ large = false }) {
-  return <div className={`photo-placeholder ${large ? 'photo-large' : ''}`}><div className="photo-inner"><span className="photo-cross">✳</span><span className="photo-label">YOUR PHOTO<br />GOES HERE</span><span className="photo-hint">Replace this placeholder with your picture</span></div><span className="photo-index">PHOTO · 01</span></div>
+  return <div className={`photo-placeholder has-photo ${large ? 'photo-large' : ''}`}><img className="portrait-image" src="/images/main.jpg" alt="Juaquin Arenas outdoors" /><span className="photo-index">PHOTO · 01</span></div>
 }
 
 function Home() {
