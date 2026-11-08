@@ -1,7 +1,7 @@
 export default function AchievementCard({ achievement, index }) {
   return (
     <article className="achievement-card project-card">
-      <div className={`achievement-cover cover-tone-${index % 5}`}>
+      <div className={`achievement-cover cover-tone-${index % 5} ${achievement.image ? 'has-cover-image' : ''}`}>
         {achievement.image
           ? <img src={achievement.image} alt={`${achievement.title} achievement`} />
           : <div className="achievement-cover-placeholder"><span className="cover-placeholder-mark">＋</span><span>ADD COVER PHOTO</span></div>}

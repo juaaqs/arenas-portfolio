@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 export default function ProjectCard({ project, compact = false }) {
   return (
     <article className={`project-card ${compact ? 'project-card-compact' : ''}`}>
-      <div className={`project-art ${project.theme}`}>
+      <div className={`project-art ${project.theme} ${project.image ? 'has-project-image' : ''}`}>
+        {project.image && <><img className="project-art-image" src={project.image} alt={`${project.title} cover`} /><span className="project-art-shade" /></>}
         <span className="project-art-number">{project.number} / 03</span>
         <span className="project-art-mark">{project.mark}</span>
         <span className="project-art-caption">{project.type}</span>
