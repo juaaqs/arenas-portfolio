@@ -1,6 +1,12 @@
-export default function AchievementCard({ achievement, index }) {
+export default function AchievementCard({ achievement, index, onClick }) {
   return (
-    <article className="achievement-card project-card">
+    <button
+      className="achievement-card project-card"
+      type="button"
+      onClick={onClick}
+      aria-haspopup="dialog"
+      aria-label={`View details for ${achievement.title}`}
+    >
       <div className={`achievement-cover cover-tone-${index % 5} ${achievement.image ? 'has-cover-image' : ''}`}>
         {achievement.image
           ? <img src={achievement.image} alt={`${achievement.title} achievement`} />
@@ -14,6 +20,6 @@ export default function AchievementCard({ achievement, index }) {
         <h3>{achievement.title}</h3>
         <p className="project-description">{achievement.detail}</p>
       </div>
-    </article>
+    </button>
   )
 }

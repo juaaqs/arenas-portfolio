@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import AchievementDialog from '../components/AchievementDialog'
 import AchievementCard from '../components/AchievementCard'
 import PageTitle from '../components/PageTitle'
 import PhotoFrame from '../components/PhotoFrame'
@@ -5,6 +7,8 @@ import Reveal from '../components/Reveal'
 import { achievements, skills } from '../data/portfolio'
 
 export default function About() {
+  const [selectedAchievement, setSelectedAchievement] = useState(null)
+
   return <>
     <PageTitle number="01" eyebrow="THE PERSON BEHIND THE PORTFOLIO" description="Still learning, still playing, still looking for the next challenge.">A student.<br /><span className="display-italic">A teammate.</span></PageTitle>
     <section className="section about-story">
@@ -18,6 +22,7 @@ export default function About() {
       ['04', 'I like to make things', 'Class projects, book covers, and a little music on electric guitar.'],
     ].map(([number, title, copy]) => <Reveal key={number}><article className="numbered-row"><span>{number}</span><h3>{title}</h3><p>{copy}</p><span className="row-arrow">↗</span></article></Reveal>)}</div></section>
     <section className="section skills-section"><div className="section-heading"><span className="section-index">03 / IN PROGRESS</span><h2>Skills &amp; <span className="display-italic">strengths.</span></h2></div><p className="section-subtitle">A first draft — still learning and growing every semester.</p><div className="skill-list">{skills.map((skill, index) => <span key={skill}><i>0{index + 1}</i>{skill}</span>)}</div></section>
-    <section className="section achievements-section" id="achievements"><div className="section-heading"><span className="section-index">04 / MILESTONES &amp; MEMORIES</span><h2>A few proud <span className="display-italic">moments.</span></h2></div><p className="section-subtitle">Fifteen moments worth remembering. Each card has space for its cover photo.</p><div className="achievement-cards-grid">{achievements.map((achievement, index) => <Reveal key={achievement.number} delay={(index % 3) * 75}><AchievementCard achievement={achievement} index={index} /></Reveal>)}</div></section>
+    <section className="section achievements-section" id="achievements"><div className="section-heading"><span className="section-index">04 / MILESTONES &amp; MEMORIES</span><h2>A few proud <span className="display-italic">moments.</span></h2></div><p className="section-subtitle">Fifteen moments worth remembering. Select a card to see its photo and event details.</p><div className="achievement-cards-grid">{achievements.map((achievement, index) => <Reveal key={achievement.number} delay={(index % 3) * 75}><AchievementCard achievement={achievement} index={index} onClick={() => setSelectedAchievement(achievement)} /></Reveal>)}</div></section>
+    {selectedAchievement && <AchievementDialog achievement={selectedAchievement} onClose={() => setSelectedAchievement(null)} />}
   </>
 }
