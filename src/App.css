@@ -2199,3 +2199,56 @@
   }
 
 }
+
+@media (max-width: 700px) {
+  .contact-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-top: 54px;
+    padding-bottom: 72px;
+  }
+
+  .contact-copy {
+    min-width: 0;
+    padding: 0;
+  }
+
+  .contact-copy h2 {
+    font-size: clamp(42px, 11vw, 58px);
+  }
+
+  .contact-links {
+    margin-top: 27px;
+  }
+
+  .contact-links a {
+    grid-template-columns: 66px minmax(0, 1fr) 18px;
+    gap: 8px;
+    padding: 16px 0;
+  }
+
+  .contact-links b {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 13px;
+  }
+
+  .contact-art {
+    width: 100%;
+    min-width: 0;
+    min-height: 350px;
+    padding: 24px;
+  }
+
+  .contact-art > p {
+    font-size: clamp(48px, 13vw, 68px);
+  }
+
+  .contact-art > p em {
+    font-size: clamp(42px, 11vw, 58px);
+  }
+
+  .contact-art-ring {
+    right: -165px;
+  }
+}
