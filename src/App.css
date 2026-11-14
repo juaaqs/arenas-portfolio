@@ -69,13 +69,6 @@
   letter-spacing: .08em;
 }
 
-.main-nav {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 34px;
-}
-
 .main-nav a {
   height: 100%;
   position: relative;
@@ -210,6 +203,7 @@
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 11px;
   align-items: center;
   margin-top: 27px;
@@ -1217,9 +1211,7 @@
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 16px;
+  min-width: 0;
 }
 
 .projects-grid .project-card {
@@ -1350,9 +1342,7 @@
 }
 
 .achievement-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 16px;
+  min-width: 0;
 }
 
 .achievement-card {
@@ -1548,22 +1538,6 @@
     justify-self: start;
   }
 
-  .projects-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .projects-grid .project-card:last-child {
-    grid-column: 1/-1;
-  }
-
-  .projects-grid .project-card:last-child .project-art {
-    height: 300px;
-  }
-
-  .achievement-cards-grid {
-    grid-template-columns: repeat(2,minmax(0,1fr));
-  }
-
   .site-footer {
     padding-left: 7%;
     padding-right: 7%;
@@ -1576,27 +1550,6 @@
     height: 74px;
     padding-left: var(--page-gutter);
     padding-right: var(--page-gutter);
-  }
-
-  .main-nav {
-    position: absolute;
-    top: 74px;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    display: none;
-    height: auto;
-    padding: 8px var(--page-gutter) 18px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 14px 20px #1112;
-  }
-
-  .main-nav.nav-open {
-    display: flex;
   }
 
   .main-nav a {
@@ -1652,10 +1605,6 @@
 
   .menu-toggle.is-open span:last-child {
     transform: translateY(-3.5px) rotate(-45deg);
-  }
-
-  .achievement-cards-grid {
-    grid-template-columns: 1fr;
   }
 
   .achievement-cover {
@@ -1850,6 +1799,26 @@
 .topline,.site-header {
   padding-left: var(--page-gutter);
   padding-right: var(--page-gutter);
+}
+
+@media (max-width: 520px) {
+  .topline {
+    justify-content: center;
+    text-align: center;
+    font-size: 8px;
+  }
+
+  .topline > span:last-child {
+    display: none;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    flex: 1 1 100%;
+  }
 }
 
 .home-hero,.section,.numbered-highlights,.page-title,.contact-banner,.site-footer {
