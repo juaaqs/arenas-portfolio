@@ -10,7 +10,7 @@ export default function ProjectCard({ project, compact = false }) {
         <span className="project-art-caption">{project.type}</span>
         <span className="project-art-arrow" aria-hidden="true">↗</span>
       </div>
-      <div className="project-card-copy"><p className="eyebrow">{project.type}</p><h3>{project.title}</h3><p className="project-description">{project.description}</p><Link to="/contact" className="inline-link">MORE ABOUT THIS <span>↗</span></Link></div>
+      <div className="project-card-copy"><p className="eyebrow">{project.type}</p><h3>{project.title}</h3><p className="project-description">{project.description}</p>{project.website ? <a href={project.website} className="inline-link" target="_blank" rel="noreferrer">VISIT PROJECT <span>↗</span></a> : <Link to="/contact" className="inline-link">MORE ABOUT THIS <span>↗</span></Link>}</div>
     </article>
   )
 }
