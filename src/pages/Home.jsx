@@ -1,11 +1,15 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee'
 import PhotoFrame from '../components/PhotoFrame'
 import ProjectCard from '../components/ProjectCard'
+import ProjectDialog from '../components/ProjectDialog'
 import Reveal from '../components/Reveal'
 import { achievements, milestones, projects } from '../data/portfolio'
 
 export default function Home() {
+  const [selectedProject, setSelectedProject] = useState(null)
+
   return <>
     <section className="home-hero">
       <div className="hero-grid-mark" aria-hidden="true" />
@@ -30,7 +34,7 @@ export default function Home() {
 
     <section className="work-section">
       <div className="section section-work-head"><div><span className="section-index">02 / SELECTED WORK</span><h2>Made with<br /><span className="display-italic">a little heart.</span></h2></div><p>A first look at class projects, personal work, and the activities that keep teaching me something new.</p><Link to="/projects" className="button button-dark">ALL PROJECTS <span>↗</span></Link></div>
-      <div className="work-grid">{projects.map((project, index) => <Reveal key={project.number} delay={index * 100}><ProjectCard project={project} compact /></Reveal>)}</div>
+      <div className="work-grid">{projects.map((project, index) => <Reveal key={project.number} delay={index * 100}><ProjectCard project={project} compact onOpen={project.gallery ? () => setSelectedProject(project) : undefined} /></Reveal>)}</div>
     </section>
 
     <section className="section achievement-preview">
@@ -40,5 +44,6 @@ export default function Home() {
     </section>
 
     <section className="contact-banner"><div className="contact-banner-star" aria-hidden="true">✳</div><p className="eyebrow">HAVE A PROJECT, A QUESTION, OR A FOOTBALL STORY?</p><h2>Say <span className="display-italic">hello.</span></h2><Link to="/contact" className="button button-light">LET’S TALK <span>↗</span></Link><span className="banner-index">04 — CONTACT</span></section>
+    {selectedProject && <ProjectDialog project={selectedProject} onClose={() => setSelectedProject(null)} />}
   </>
 }

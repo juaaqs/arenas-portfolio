@@ -118,7 +118,21 @@ export const achievements = [
 export const projects = [
   { number: '01', title: 'My Portfolio', type: 'WEB DESIGN', description: 'A personal space to share my journey, achievements, and the projects I create as an IT student.', mark: 'JA', theme: 'project-lime', image: '/images/port.jpg' },
   { number: '02', title: 'LPG Ordering & Inventory Tracking System', type: 'APPLICATION DEVELOPMENT', description: 'A web-based LPG business management system that centralizes inventory, sales, and customer data. Built with Firebase, it provides real-time cylinder stock updates, daily sales, and transaction history to reduce manual work and improve data reliability.', mark: 'LPG', theme: 'project-orange', image: '/images/lpg.jpg', website: 'https://jashley-lpg.web.app' },
-  { number: '03', title: 'Projectile Motion Model', type: 'PHYSICS · 2023', description: 'A classroom model that brings projectile motion to life through a hands-on demonstration.', mark: '↗', theme: 'project-blue', image: '/images/motion.jpg' },
+  {
+    number: '03',
+    title: 'Project Mabayuan Express',
+    type: 'APPLICATION DEVELOPMENT',
+    description: 'A web-based document request management system for Barangay Mabayuan, Olongapo City, Zambales.',
+    fullDescription: [
+      'Project Mabayuan Express modernizes the traditional manual process of requesting barangay documents through a digital platform residents can access from desktop or mobile browsers.',
+      'It replaces paper-based queuing and manual processing with an organized, traceable workflow. Residents can submit requests from home, track document status in real time, and receive email notifications at every stage.',
+      'The system uses Node.js and Express.js for the backend, PostgreSQL hosted on Supabase as the database, and plain HTML, CSS, and JavaScript for the frontend. It is deployed on Render and uses Brevo for transactional email delivery.',
+    ],
+    mark: 'MX',
+    theme: 'project-blue',
+    image: '/images/mabayuan1.jpg',
+    gallery: ['/images/mabayuan1.jpg', '/images/mabayuan2.jpeg', '/images/mabayuan3.jpeg'],
+  },
 ]
 
 export const skills = ['Mathematical thinking', 'Problem solving', 'Teamwork', 'Discipline', 'Football & futsal', 'Chess', 'Creativity', 'Curiosity']

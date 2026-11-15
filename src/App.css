@@ -758,6 +758,18 @@
   overflow: hidden;
 }
 
+.project-art.project-art-trigger {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  appearance: none;
+}
+
 .project-lime {
   background: #a6dce8;
 }
@@ -867,6 +879,16 @@
 
 .project-card .inline-link {
   font-size: 8px;
+}
+
+.project-card .project-open-link {
+  padding: 0 0 6px;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
 }
 
 .project-card-compact .project-art {
@@ -1999,6 +2021,17 @@
 .achievement-dialog-content {
   align-self: center;
   padding: clamp(28px, 5vw, 62px);
+}
+
+.project-dialog-description-list {
+  display: grid;
+  gap: 12px;
+}
+
+.project-dialog-description-list .achievement-dialog-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
 }
 
 .achievement-dialog-content .eyebrow {
