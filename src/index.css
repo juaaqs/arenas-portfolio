@@ -2,14 +2,14 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #181b15;
-  --paper: #f3f3ed;
-  --soft: #e5e7dc;
-  --muted: #757a70;
-  --line: #ced1c4;
-  --lime: #d5ff43;
-  --orange: #ff7956;
-  --blue: #9fe0e6;
+  --ink: #18283d;
+  --paper: #f5f2ec;
+  --soft: #e8ebef;
+  --muted: #68788c;
+  --line: #d5dce3;
+  --accent: #a6dce8;
+  --orange: #e98269;
+  --blue: #a9c7e8;
   --mono: 'DM Mono', monospace;
   --display: 'Space Grotesk', sans-serif;
 
@@ -56,7 +56,7 @@ button {
 
 ::selection {
   color: var(--ink);
-  background: var(--lime);
+  background: var(--accent);
 }
 
 :focus-visible {
