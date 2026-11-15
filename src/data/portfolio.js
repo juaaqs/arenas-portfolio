@@ -4,6 +4,7 @@ export const achievements = [
     title: 'Top 1 Movie',
     detail: 'Earth Science',
     image: '/images/movie.jpg',
+    gallery: ['/images/movie.jpg', '/images/movie1.jpeg'],
     description: 'During my first year of college, our Earth Science class made a short film about the importance of being prepared in everyday life. I played the main character. The story shows how accidents can happen and ends with the character facing guilt and regret, leaving a strong impact on the film’s message.',
   },
   {
@@ -25,6 +26,7 @@ export const achievements = [
     title: 'SGFC 1st Futsal Cup',
     detail: '2022 · Champion',
     image: '/images/sgfc1.jpeg',
+    gallery: ['/images/sgfc1.jpeg', '/images/chairman2.jpg'],
     description: 'In 2022, during the pandemic period, we competed against football clubs from other regions. I played for Subic Gapo Football Club (SGFC), and this was my first championship with the club. Thank you to Coach Janzen Franco and all my teammates.',
   },
   {
@@ -32,6 +34,7 @@ export const achievements = [
     title: 'SGFC 2nd Futsal Cup',
     detail: '2022 · Champion',
     image: '/images/sgfc2.jpg',
+    gallery: ['/images/sgfc2.jpg', '/images/sgfc22.jpeg'],
     description: 'This tournament was in May 2022, still during the pandemic. After a long time of limited chances to connect, play, and train, our hard work and sacrifices paid off with a victory. The tournament took place at Subic Gym, and it remains one of my happiest achievements.',
   },
   {
@@ -39,6 +42,7 @@ export const achievements = [
     title: 'PFF Qualifier',
     detail: 'Philippine Football Federation',
     image: '/images/pff.jpg',
+    gallery: ['/images/pff.jpg', '/images/pff1.jpg', '/images/pff2.jpg', '/images/pff3.jpg'],
     description: 'Qualifying for the Philippine Football Federation under-19 event was unexpected. It was my first time competing with players from places including Baguio and Benguet, Tarlac City, and Pangasinan.',
   },
   {
@@ -67,6 +71,7 @@ export const achievements = [
     title: 'Sepak Takraw',
     detail: '2022 · Silver',
     image: '/images/sepak.jpg',
+    gallery: ['/images/sepak.jpg', '/images/sepak2.jpg', '/images/sepak3.jpeg'],
     description: 'At Columban College’s Grade 12 Sportfest, football and futsal were not available, so I tried Sepak Takraw with my friends and football teammates Yves Quiel Ebilane and Alexander Oda. We earned silver and received incentives in our subjects.',
   },
   {
@@ -81,6 +86,7 @@ export const achievements = [
     title: 'Top 1 Book Cover Making',
     detail: '2024',
     image: '/images/book.jpeg',
+    gallery: ['/images/book.jpeg', '/images/book1.jpg'],
     description: 'During my first year of college, our Earth Science subject had a book-cover-making activity. There were many groups in the class, so earning Top 1 was unexpected and exciting.',
   },
   {
@@ -88,6 +94,7 @@ export const achievements = [
     title: 'Academic Excellence Awardee',
     detail: '2023',
     image: '/images/acad.jpg',
+    gallery: ['/images/acad.jpg', '/images/acad1.jpg', '/images/acad2.jpg', '/images/acad3.jpg', '/images/acad4.jpg'],
     description: 'Graduating from Columban College was a journey full of experiences, adventures, and achievements. I am thankful to all my teachers for guiding me and to the friends who became part of my time there.',
   },
   {
@@ -95,6 +102,7 @@ export const achievements = [
     title: 'Chairman’s Futsal Cup',
     detail: '2022 · Champion',
     image: '/images/chairmain.jpg',
+    gallery: ['/images/chairmain.jpg', '/images/chairman2.jpg'],
     description: 'I was in Grade 11 at Columban College when I played in the Chairman’s Futsal Cup. My SGFC family and I won the gold and trophy again. It was another wonderful achievement with the team.',
   },
   {
@@ -102,6 +110,7 @@ export const achievements = [
     title: 'CCS Intrams Champion',
     detail: '2024',
     image: '/images/ccs.jpeg',
+    gallery: ['/images/ccs.jpeg', '/images/ccs2.JPG', '/images/ccs3.jpg', '/images/ccs4.jpeg', '/images/ccs5.jpeg', '/images/ccs6.jpeg', '/images/ccs7.jpeg'],
     description: 'This was my first time playing my main sport at the Gordon College intramurals. I was a first-year college student representing the College of Computer Studies in futsal. CCS had not won the title for six years, so it was wonderful and unexpected that our team brought the championship back.',
   },
 ]

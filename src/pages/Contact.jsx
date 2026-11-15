@@ -1,4 +1,5 @@
 import PageTitle from '../components/PageTitle'
+import Slideshow from '../components/Slideshow'
 
 export default function Contact() {
   return <>
@@ -22,6 +23,11 @@ export default function Contact() {
         </div>
       </div>
       <div className="contact-art">
+        <Slideshow
+          className="contact-art-slideshow"
+          images={['/images/contact-con.jpeg', '/images/con2.jpg']}
+          label="Contact artwork"
+        />
         <span>✳</span>
         <p>MAKE<br />IT<br /><em>HAPPEN.</em></p>
         <small>OLONGAPO CITY<br />PHILIPPINES</small>

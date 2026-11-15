@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
+import Slideshow from './Slideshow'
 
 export default function AchievementDialog({ achievement, onClose }) {
   const closeButton = useRef(null)
+  const gallery = achievement.gallery ?? (achievement.image ? [achievement.image] : [])
 
   useEffect(() => {
     const previouslyFocused = document.activeElement
@@ -45,8 +47,8 @@ export default function AchievementDialog({ achievement, onClose }) {
         </button>
 
         <div className="achievement-dialog-photo">
-          {achievement.image ? (
-            <img src={achievement.image} alt={`${achievement.title} event`} />
+          {gallery.length > 0 ? (
+            <Slideshow className="achievement-slideshow" images={gallery} label={achievement.title} />
           ) : (
             <div className="achievement-dialog-photo-placeholder">
               <span>ADD EVENT PHOTO</span>
