@@ -1387,17 +1387,37 @@
 
 .contact-links a {
   display: grid;
-  grid-template-columns: 72px 1fr 22px;
-  gap: 15px;
+  grid-template-columns: 48px minmax(0, 1fr) 22px;
+  gap: 12px;
   align-items: center;
   padding: 17px 0;
   border-top: 1px solid var(--line);
 }
 
-.contact-links a>span {
-  font: 8px var(--mono);
-  letter-spacing: .1em;
-  color: #888e81;
+.contact-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--soft);
+  color: #43647b;
+  transition: color .2s, background .2s, transform .2s;
+}
+
+.contact-icon svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-links a:hover .contact-icon {
+  background: var(--accent);
+  color: var(--ink);
+  transform: scale(1.06);
 }
 
 .contact-links b {
@@ -2492,7 +2512,7 @@
   }
 
   .contact-links a {
-    grid-template-columns: 66px minmax(0, 1fr) 18px;
+    grid-template-columns: 44px minmax(0, 1fr) 18px;
     gap: 8px;
     padding: 16px 0;
   }
