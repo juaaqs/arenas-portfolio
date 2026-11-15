@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { ViewTransition, useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import IntroOverlay from './IntroOverlay'
 
@@ -23,7 +23,9 @@ export default function Layout() {
         </nav>
         <Link className="header-cta" to="/contact" onClick={closeMenu}>LET’S TALK <span>↗</span></Link>
       </header>
-      <main><Outlet /></main>
+      <ViewTransition enter="page-enter" exit="page-exit">
+        <main><Outlet /></main>
+      </ViewTransition>
       <footer className="site-footer">
         <div className="footer-heading"><p className="eyebrow">THANKS FOR STOPPING BY</p><Link to="/contact">Have a good one.<br /><span>Let’s keep in touch.</span> ↗</Link></div>
         <div className="footer-bottom"><Link className="footer-brand" to="/">JUAQUIN ARENAS <span>© 2026</span></Link><span>MADE WITH CURIOSITY IN OLONGAPO CITY</span><Link to="/">BACK TO TOP ↑</Link></div>

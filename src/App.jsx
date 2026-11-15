@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -7,7 +7,7 @@ import Projects from './pages/Projects'
 import './App.css'
 
 function NotFound() {
-  return <section className="not-found"><p className="eyebrow">404 · PAGE NOT FOUND</p><h1>Looks like a<br /><span className="display-italic">wrong turn.</span></h1><a className="button button-dark" href="/">BACK TO HOME <span>↗</span></a></section>
+  return <section className="not-found"><p className="eyebrow">404 · PAGE NOT FOUND</p><h1>Looks like a<br /><span className="display-italic">wrong turn.</span></h1><Link className="button button-dark" to="/">BACK TO HOME <span>↗</span></Link></section>
 }
 
 export default function App() {
