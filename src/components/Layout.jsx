@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
+import IntroOverlay from './IntroOverlay'
 
 export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -27,6 +28,7 @@ export default function Layout() {
         <div className="footer-heading"><p className="eyebrow">THANKS FOR STOPPING BY</p><Link to="/contact">Have a good one.<br /><span>Let’s keep in touch.</span> ↗</Link></div>
         <div className="footer-bottom"><Link className="footer-brand" to="/">JUAQUIN ARENAS <span>© 2026</span></Link><span>MADE WITH CURIOSITY IN OLONGAPO CITY</span><Link to="/">BACK TO TOP ↑</Link></div>
       </footer>
+      <IntroOverlay />
     </div>
   )
 }
