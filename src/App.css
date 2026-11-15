@@ -992,6 +992,16 @@
   vertical-align: -.12em;
 }
 
+.projects-contact-banner .banner-quote-attribution {
+  display: inline-block;
+  margin-left: .7em;
+  color: #344f62;
+  font: 500 .28em/1 var(--mono);
+  letter-spacing: .02em;
+  vertical-align: .32em;
+  white-space: nowrap;
+}
+
 .button-light {
   background: var(--ink);
   color: var(--paper);
