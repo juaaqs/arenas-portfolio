@@ -22,6 +22,16 @@ export default function ProjectCard({ project, compact = false, onOpen }) {
         >
           {artContent}
         </button>
+      ) : project.website ? (
+        <a
+          className={`project-art project-art-link ${project.theme} ${project.image ? 'has-project-image' : ''}`}
+          href={project.website}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Open ${project.title}`}
+        >
+          {artContent}
+        </a>
       ) : (
         <div className={`project-art ${project.theme} ${project.image ? 'has-project-image' : ''}`}>
           {artContent}

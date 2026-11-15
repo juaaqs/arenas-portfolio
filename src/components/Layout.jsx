@@ -21,7 +21,7 @@ export default function Layout() {
         <nav className={`main-nav ${menuOpen ? 'flex' : 'hidden'} absolute left-0 right-0 top-[74px] z-10 h-auto flex-col items-stretch gap-0 border-b border-[var(--line)] bg-[var(--paper)] px-[var(--page-gutter)] pb-[18px] pt-2 shadow-[0_14px_20px_#1112] min-[701px]:static min-[701px]:flex min-[701px]:h-full min-[701px]:flex-row min-[701px]:items-center min-[701px]:gap-[34px] min-[701px]:border-0 min-[701px]:bg-transparent min-[701px]:p-0 min-[701px]:shadow-none`} aria-label="Main navigation">
           <NavLink to="/" end onClick={closeMenu}>HOME</NavLink><NavLink to="/about" onClick={closeMenu}>ABOUT</NavLink><NavLink to="/projects" onClick={closeMenu}>PROJECTS</NavLink><NavLink to="/contact" onClick={closeMenu}>CONTACT</NavLink>
         </nav>
-        <Link className="header-cta" to="/contact" onClick={closeMenu}>LET’S TALK <span>↗</span></Link>
+        <Link className="header-cta" to="/contact" onClick={closeMenu}>ML TAYU <span>↗</span></Link>
       </header>
       <ViewTransition enter="page-enter" exit="page-exit">
         <main><Outlet /></main>

@@ -770,6 +770,12 @@
   appearance: none;
 }
 
+.project-art.project-art-link {
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
 .project-lime {
   background: #a6dce8;
 }
@@ -969,6 +975,21 @@
 
 .contact-banner h2 .display-italic {
   color: #3a576c;
+}
+
+.projects-contact-banner h2 {
+  max-width: 1050px;
+  font-size: clamp(44px, 7.2vw, 102px);
+  line-height: .98;
+  letter-spacing: -.085em;
+  text-wrap: balance;
+}
+
+.projects-contact-banner .banner-quote-mark {
+  color: var(--orange);
+  font: 700 1.35em/.5 Georgia, serif;
+  letter-spacing: -.12em;
+  vertical-align: -.12em;
 }
 
 .button-light {

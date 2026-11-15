@@ -116,7 +116,7 @@ export const achievements = [
 ]
 
 export const projects = [
-  { number: '01', title: 'My Portfolio', type: 'WEB DESIGN', description: 'A personal space to share my journey, achievements, and the projects I create as an IT student.', mark: 'JA', theme: 'project-lime', image: '/images/port.jpg' },
+  { number: '01', title: 'My Portfolio', type: 'WEB DESIGN', description: 'A personal space to share my journey, achievements, and the projects I create as an IT student.', mark: 'JA', theme: 'project-lime', image: '/images/port.jpg', website: 'https://github.com/juaaqs/arenas-portfolio' },
   { number: '02', title: 'LPG Ordering & Inventory Tracking System', type: 'APPLICATION DEVELOPMENT', description: 'A web-based LPG business management system that centralizes inventory, sales, and customer data. Built with Firebase, it provides real-time cylinder stock updates, daily sales, and transaction history to reduce manual work and improve data reliability.', mark: 'LPG', theme: 'project-orange', image: '/images/lpg.jpg', website: 'https://jashley-lpg.web.app' },
   {
     number: '03',

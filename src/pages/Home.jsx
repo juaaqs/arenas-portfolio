@@ -43,7 +43,7 @@ export default function Home() {
       <Link to="/about#achievements" className="inline-link">SEE MY ACHIEVEMENTS <span>↗</span></Link>
     </section>
 
-    <section className="contact-banner"><div className="contact-banner-star" aria-hidden="true">✳</div><p className="eyebrow">HAVE A PROJECT, A QUESTION, OR A FOOTBALL STORY?</p><h2>Say <span className="display-italic">hello.</span></h2><Link to="/contact" className="button button-light">LET’S TALK <span>↗</span></Link><span className="banner-index">04 — CONTACT</span></section>
+    <section className="contact-banner"><div className="contact-banner-star" aria-hidden="true">✳</div><p className="eyebrow">HAVE A PROJECT, A QUESTION, OR A FOOTBALL STORY?</p><h2>Say <span className="display-italic">hello.</span></h2><Link to="/contact" className="button button-light">ML TAYU <span>↗</span></Link><span className="banner-index">04 — CONTACT</span></section>
     {selectedProject && <ProjectDialog project={selectedProject} onClose={() => setSelectedProject(null)} />}
   </>
 }
